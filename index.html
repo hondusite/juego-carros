@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nieve Extrema — Juego de Carreras 3D</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Three.js UMD (script clásico): funciona abriendo el .html con doble clic, sin localhost -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+<body>
+  <div id="game-container"></div>
+
+  <div id="hud">
+    <div class="hud-item"><span>VELOCIDAD</span><strong><span id="speed">0</span> km/h</strong></div>
+    <div class="hud-item"><span>DISTANCIA</span><strong><span id="distance">0</span> m</strong></div>
+    <div class="hud-item"><span>TIEMPO</span><strong id="time">0:00</strong></div>
+  </div>
+
+  <div id="damage-warning">¡FUERA DE PISTA! ❄</div>
+
+  <div id="overlay">
+    <div class="panel">
+      <h1>❄ NIEVE EXTREMA 🏔</h1>
+      <p>Carrera de montaña nevada en 3D con <b>Three.js</b></p>
+      <div class="controls">
+        <div><kbd>▲</kbd> Acelerar</div>
+        <div><kbd>▼</kbd> Frenar / Reversa</div>
+        <div><kbd>◀</kbd> <kbd>▶</kbd> Girar</div>
+        <div><kbd>R</kbd> Reiniciar</div>
+      </div>
+      <p class="tip">No salgas de la carretera, esquiva rocas y rivales.<br>La nieve fuera de pista te frena.</p>
+      <button id="start-btn">EMPEZAR CARRERA</button>
+    </div>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>
